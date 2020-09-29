@@ -1,13 +1,17 @@
-import React from "react";
-import "./App.css";
-import { Header } from "./Screens/Header/Header";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import './App.css';
+
+import { RouterConfig } from './Router';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
-	return (
-		<div className="App">
-			<h1>Hello World</h1>
-		</div>
-	);
+  return (
+    <GlobalProvider>
+      <RouterConfig />
+    </GlobalProvider>
+  );
 }
 
 export default App;
